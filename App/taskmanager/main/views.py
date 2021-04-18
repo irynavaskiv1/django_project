@@ -3,11 +3,11 @@ from django.http import HttpResponse
 
 
 def index(request):
-    return HttpResponse("<h4> Welcome to Iryna's website!")
+    return render(request, 'main/index.html')
 
 
-
-
+def about(request):
+    return render(request, 'main/about.html')
 
 
 
