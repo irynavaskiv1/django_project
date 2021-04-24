@@ -1,14 +1,18 @@
 {% extends 'main/base.html' %}
 {% block title0 %}
-Pricing Sunflowers hotel and restaurant complex
+Все про
 {% endblock %}
 
 {% block title1 %}
-There are Sunflowers hotel and restaurant complex with different's pricing type
 {% endblock %}
 
 {% block content0 %}
-PRICE
+<h3> Записи в ресторані:</h3>>
+    {% for el in contacts %}
+        <div class="alert alert-warning mt-2">
+            <h> {{ el.name }} </h>>
+            <p2> {{ el.phone }} </p2>>
+    {% endfor %}
 {% endblock %}
 
 {% block content1 %}

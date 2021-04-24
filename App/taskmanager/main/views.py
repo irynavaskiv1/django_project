@@ -3,9 +3,9 @@ from .models import ContactUs
 
 
 def index(request):
-    contact = ContactUs.objects.all()
+    contacts = ContactUs.objects.order_by('id')
     return render(request, 'main/index.html', {'title': 'Main page',
-                                               'contact': contact})
+                                               'contacts': contacts})
 
 
 def about(request):
