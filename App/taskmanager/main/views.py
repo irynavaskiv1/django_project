@@ -12,10 +12,29 @@ def about(request):
     return render(request, 'main/about.html')
 
 
-def pricing(request):
-    return render(request, 'main/pricing.html')
+def history(request):
+    return render(request, 'main/history.html')
 
 
-def support(request):
-    return render(request, 'main/support.html')
+def kindergarten(request):
+    return render(request, 'main/kindergarten.html')
 
+
+def school(request):
+    return render(request, 'main/school.html')
+
+
+def college(request):
+    return render(request, 'main/college.html')
+
+
+def religion(request):
+    return render(request, 'main/religion.html')
+
+
+def restaurant(request):
+    return render(request, 'main/restaurant.html')
+
+
+def contacts(request):
+    return render(request, 'main/contacts.html')
