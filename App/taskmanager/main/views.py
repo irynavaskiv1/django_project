@@ -24,8 +24,8 @@ def school(request):
     return render(request, 'main/school.html')
 
 
-def college(request):
-    return render(request, 'main/college.html')
+def lyceum(request):
+    return render(request, 'main/lyceum.html')
 
 
 def religion(request):
