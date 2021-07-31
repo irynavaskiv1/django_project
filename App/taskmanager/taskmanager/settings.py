@@ -13,7 +13,7 @@ SECRET_KEY = 'l*t#4c4@^k*3zn2y%n0x)v3026khsshcqd%gu4f20m@ne%a!c9'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['http://irynavaskiv.pythonanywhere.com/']
 
 
 # Application definition
