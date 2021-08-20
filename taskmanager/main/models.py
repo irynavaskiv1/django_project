@@ -2,6 +2,9 @@ from django.db import models
 
 
 class ContactUs(models.Model):
+    """
+    Add tables in DB. As usual one model is a one table.
+    """
     name = models.CharField('Your name ', max_length=50)
     phone = models.TextField('Your phone', max_length=100)
 

@@ -12,4 +12,3 @@ TO-DO list:
 - add additional info for contacts block
 - test with different browsers and platforms
 - add chat support
-
