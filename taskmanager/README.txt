@@ -18,5 +18,3 @@ python3 manage.py migrate
 TODO list:
 - test with different browsers and platforms
 - add chat support (twilio)
-- add blog
-- add version
