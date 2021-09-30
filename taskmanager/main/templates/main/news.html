@@ -1162,11 +1162,16 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
         <div class="md-text gizmo-container">
             <div class="md-text-title inline-editor-title "></div>
             <div class="md-text-content inline-editor "><p style="text-align: justify;" data-mce-style="text-align: justify;">
-                {% for el in news_obj%}
-                <div class="alert alert-warning">
-                    <a href="{{ el.text }}">{{el.title}}, Дата публікації: {{el.date}}</a>
-                </div>
-                {% endfor %}
+                {% if news_obj %}
+                    {% for el in news_obj %}
+                    <div class="alert alert-warning">
+                        <a href="{{ el.text }}">{{el.title}}, Дата публікації: {{el.date}}</a>
+                    </div>
+                    {% endfor %}
+                {% else %}
+                    <p> У вас немає записів в біза даних </p>
+                {% endif %}
+                {# Можливість коментування #}
             </p></div>
         </div>
 
