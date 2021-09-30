@@ -1050,7 +1050,7 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
 
      <div class="md-text-container md_text_style-6083d74ac916e  md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text">
         <div class="md-text gizmo-container">
-            <div class="md-text-title inline-editor-title "><div>Погірці</div></div>
+            <div class="md-text-title inline-editor-title "><div>Новини</div></div>
             <div class="md-text-content inline-editor  without-content"><p></p></div>
         </div>
 
@@ -1161,9 +1161,12 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
      <div class="md-text-container md_text_style-6083d74ac960c  md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text">
         <div class="md-text gizmo-container">
             <div class="md-text-title inline-editor-title "></div>
-            <div class="md-text-content inline-editor "><p style="text-align: justify;" data-mce-style="text-align: justify;">Погірці - стрімко розвиваюче село в Україні, в Самбірському районі Львівської області. Населення приблизно налічує  1634 особи (у 1977 році населення налічувало 2113 осіб). Село розташоване за 11 км на схід від Рудок. В селі діє садок "Журавлик", школа, вище професійне училище.
-                Духовно збагачує село греко-католицька, православна церкви і костел. З трьох сторін в'їзду в село діють каплички, одна з яких має джерело. З продуктових магазинів, які є в селі - це мінімаркет в центрі, а також 4-5 магазинів, які розкинуті по всьому селі. В селі діє ресторан-кафе "Катерина", у якому можна відзначати важливі події. Часто на головному стадіоні села, який знаходиться в центрі, проводить змагання ФК "Сокіл".
-                На південь від села протікає річка Дністер, де місцеві жителі часто проводять вихідні. Навколо села є 3-4 діючих озерця, де жителі села розводять рибу.
+            <div class="md-text-content inline-editor "><p style="text-align: justify;" data-mce-style="text-align: justify;">
+                {% for el in news_obj%}
+                <div class="alert alert-warning">
+                    <a href="{{ el.text }}">{{el.title}}, Дата публікації: {{el.date}}</a>
+                </div>
+                {% endfor %}
             </p></div>
         </div>
 
@@ -1249,7 +1252,6 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
      <div class="md-text-container md_text_style-6083d74ac9ccd  md-align-right wpb_wrapper wpb_md_text_wrapper ui-md_text">
         <div class="md-text gizmo-container">
             <div class="md-text-title inline-editor-title ">
-                <div> Вигідно вирізняє Погірці серед інших великих сіл Самбірщини сучасна двоповерхова споруда Амбулаторії сімейної медицини.</div></div>
             <div class="md-text-content inline-editor  without-content"><p></p></div>
         </div>
     </div>
