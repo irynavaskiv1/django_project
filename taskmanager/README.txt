@@ -11,10 +11,14 @@ this command will create a directory with files
 4. run localhost project (with cd before)
 python3 manage.py runserver
 
-
+5. update db
 python3 manage.py makemigrations
 python3 manage.py migrate
 
-TODO list:
-- test with different browsers and platforms
-- add chat support (twilio)
+###########################TEST RUN:###########################
+1. run functional tests
+taskmanager/main/templates/tests/functional_tests.py
+
+2. run module tests
+python3 manage.py test main/templates/tests/
+###############################################################
