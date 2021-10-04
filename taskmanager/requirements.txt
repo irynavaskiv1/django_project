@@ -5,3 +5,4 @@ setuptools
 sqlparse
 selenium
 python-dotenv
+bs4
