@@ -1,16 +1,10 @@
 import const
 import unittest
 
-from selenium import webdriver
+from . import base_class
 
 
-class AllTitlesTestSuite(unittest.TestCase):
-
-    def setUp(self):
-        self.browser = webdriver.Firefox()
-
-    def tearDown(self):
-        self.browser.quit()
+class AllTitlesTestSuite(base_class.BaseSetUp):
 
     def test_about_us_page(self):
         self.browser.get(const.URL)
