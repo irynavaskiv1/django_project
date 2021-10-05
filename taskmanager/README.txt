@@ -19,6 +19,6 @@ python3 manage.py migrate
 1. run functional tests
 taskmanager/main/templates/tests/functional_tests.py
 
-2. run module tests
+2. run module tests (without run server)
 python3 manage.py test main/templates/tests/
 ###############################################################
