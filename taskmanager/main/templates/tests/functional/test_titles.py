@@ -6,37 +6,28 @@ from . import const
 
 class AllTitlesTestSuite(base_class.BaseSetUp):
 
-    def test_about_us_page(self):
-        self.browser.get(const.URL)
-        self.assertIn('Про нас - Погірці', self.browser.title)
-
-    def test_history_page(self):
-        self.browser.get(const.URL + '/history')
-        self.assertIn('Історія - Погірці', self.browser.title)
-
-    def test_kindergarten_page(self):
-        self.browser.get(const.URL + '/kindergarten')
-        self.assertIn('Садок - Погірці', self.browser.title)
-
-    def test_school_page(self):
-        self.browser.get(const.URL + '/school')
-        self.assertIn('Школа - Погірці', self.browser.title)
-
-    def test_lyceum_page(self):
-        self.browser.get(const.URL + '/lyceum')
-        self.assertIn('Ліцей - Погірці', self.browser.title)
-
-    def test_religion_page(self):
-        self.browser.get(const.URL + '/religion')
-        self.assertIn('Релігія - Погірці', self.browser.title)
-
-    def test_restaurant_page(self):
-        self.browser.get(const.URL + '/restaurant')
-        self.assertIn('Ресторан - Погірці', self.browser.title)
-
-    def test_contacts_page(self):
-        self.browser.get(const.URL + '/contacts')
-        self.assertIn('Контакти - Погірці', self.browser.title)
+    def test_titles_in_each_page(self):
+        pages = ['', '/history', '/kindergarten', '/school', '/lyceum', '/religion', '/restaurant', '/contacts']
+        for page in pages:
+            self.browser.get(const.URL + page)
+            if page == '':
+                self.assertIn('Про нас - Погірці', self.browser.title)
+            elif page == '/history':
+                self.assertIn('Історія - Погірці', self.browser.title)
+            elif page == '/kindergarten':
+                self.assertIn('Садок - Погірці', self.browser.title)
+            elif page == '/school':
+                self.assertIn('Школа - Погірці', self.browser.title)
+            elif page == '/lyceum':
+                self.assertIn('Ліцей - Погірці', self.browser.title)
+            elif page == '/religion':
+                self.assertIn('Релігія - Погірці', self.browser.title)
+            elif page == '/restaurant':
+                self.assertIn('Ресторан - Погірці', self.browser.title)
+            elif page == '/contacts':
+                self.assertIn('Контакти - Погірці', self.browser.title)
+            else:
+                return f'{page} is not found!'
 
 
 def suite():
