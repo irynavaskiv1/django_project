@@ -1,7 +1,7 @@
-import const
 import unittest
 
 from . import base_class
+from . import const
 
 
 class AllTitlesTestSuite(base_class.BaseSetUp):
@@ -54,4 +54,4 @@ def suite():
 
 if __name__ == '__main__':
     runner = unittest.TextTestRunner()
-    runner.run()
+    runner.run(suite())
