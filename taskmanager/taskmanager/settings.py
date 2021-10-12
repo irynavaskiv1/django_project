@@ -3,7 +3,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'l*t#4c4@^k*3zn2y%n0x)v3026khsshcqd%gu4f20m@ne%a!c9'
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'irynavaskiv.pythonanywhere.com', 'www.pohirtsi.space']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.pohirtsi.space']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
