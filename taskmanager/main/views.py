@@ -36,5 +36,9 @@ def restaurant(request):
     return render(request, 'main/restaurant.html')
 
 
+def news(request):
+    return render(request, 'main/news.html')
+
+
 def contacts(request):
     return render(request, 'main/contacts.html')
