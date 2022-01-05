@@ -1,11 +1,10 @@
 from django.shortcuts import render
-from .models import ContactUs
+from .models import NewsDB
 
 
-def index(request):
-    contacts = ContactUs.objects.order_by('id')
-    return render(request, 'main/index.html', {'title': 'Main page',
-                                               'contacts': contacts})
+def news_home(request):
+    news_obj = NewsDB.objects.order_by('id')
+    return render(request, 'main/news.html', {'news_obj': news_obj})
 
 
 def about(request):
