@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import ContactUs
+from .models import NewsDB
 
-admin.site.register(ContactUs)
+admin.site.register(NewsDB)
