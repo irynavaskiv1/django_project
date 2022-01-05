@@ -1161,14 +1161,14 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
             font-style:     regular;
             font-weight:    400;
             }
-
     </style>
+
      <div class="md-text-container md_text_style-6083d74ac960c  md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text">
         <div class="md-text-content inline-editor ">
-            {% if news_obj %}
-                {% for el in news_obj %}
+            {% if news %}
+                {% for el in news %}
                 <div class="alert alert-warning">
-                    <a href="{{ el.text }}" target="_blank">{{el.title}}, Дата публікації: {{el.date}}</a>
+                    <a href="{{ el.text }}" target="_blank">{{ el.title }}, Дата публікації: {{ el.date }}</a>
                 </div>
                 {% endfor %}
             {% else %}
