@@ -2,9 +2,9 @@ from django.shortcuts import render
 from .models import NewsDB
 
 
-def news_home(request):
-    news_obj = NewsDB.objects.order_by('id')
-    return render(request, 'main/news.html', {'news_obj': news_obj})
+def news_db(request):
+    news = NewsDB.objects.all()
+    return render(request, 'main/news.html', {'news': news})
 
 
 def about(request):
