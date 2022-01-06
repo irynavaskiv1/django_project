@@ -1,10 +1,5 @@
 from django.shortcuts import render
-from .models import NewsDB
-
-
-def news_db(request):
-    news = NewsDB.objects.all()
-    return render(request, 'main/news.html', {'news': news})
+from .models import News
 
 
 def about(request):
@@ -36,7 +31,8 @@ def restaurant(request):
 
 
 def news(request):
-    return render(request, 'main/news.html')
+    news = News.objects.all()
+    return render(request, 'main/news.html', {'news': news})
 
 
 def contacts(request):

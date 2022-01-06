@@ -1,4 +1,4 @@
 from django.contrib import admin
-from .models import NewsDB
+from .models import News
 
-admin.site.register(NewsDB)
+admin.site.register(News)
