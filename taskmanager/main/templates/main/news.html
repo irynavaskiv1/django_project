@@ -1166,13 +1166,12 @@ var a2a_config=a2a_config||{};a2a_config.callbacks=a2a_config.callbacks||[];a2a_
      <div class="md-text-container md_text_style-6083d74ac960c  md-align-left wpb_wrapper wpb_md_text_wrapper ui-md_text">
         <div class="md-text-content inline-editor ">
             {% if news %}
-                {% for news1 in news %}
+                {% for n in news %}
                 <div class="alert alert-warning">
-                    <a href="{{ news1.text }}" target="_blank">{{ news1.title }}, Дата публікації: {{ news1.date }}</a>
+                    <a href="{{ n.text }}" target="_blank">{{ n.title }}, Дата: {{ n.date }}</a>
                 </div>
                 {% endfor %}
             {% else %}
-
                 <p> У вас немає записів в базі даних </p>
             {% endif %}
                 {# Можливість коментування #}
