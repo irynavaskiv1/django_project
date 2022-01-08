@@ -31,7 +31,7 @@ def restaurant(request):
 
 
 def news(request):
-    news = News.objects.all()
+    news = News.objects.order_by('-date')
     return render(request, 'main/news.html', {'news': news})
 
 
