@@ -48,8 +48,11 @@ WSGI_APPLICATION = 'taskmanager.wsgi.application'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'irynavaskiv$main',
+        'USER': 'irynavaskiv',
+        'PASSWORD': 'qazWSX123!',
+        'HOST': 'irynavaskiv.mysql.pythonanywhere-services.com',
     }
 }
 
