@@ -46,6 +46,7 @@ TEMPLATES = [
 WSGI_APPLICATION = 'taskmanager.wsgi.application'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -53,11 +54,9 @@ DATABASES = {
         'USER': 'irynavaskiv',
         'PASSWORD': 'qazWSX123!',
         'HOST': 'irynavaskiv.mysql.pythonanywhere-services.com',
+        'PORT': '3306',
     }
 }
-
-# Password validation
-# https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {

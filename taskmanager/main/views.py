@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import News
+from .models import Newstable
 
 
 def about(request):
@@ -31,7 +31,7 @@ def restaurant(request):
 
 
 def news(request):
-    news = News.objects.order_by('-date')
+    news = Newstable.objects.order_by('-date')
     return render(request, 'main/news.html', {'news': news})
 
 
