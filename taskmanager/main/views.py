@@ -1,11 +1,5 @@
 from django.shortcuts import render
-from .models import ContactUs
-
-
-def index(request):
-    contacts = ContactUs.objects.order_by('id')
-    return render(request, 'main/index.html', {'title': 'Main page',
-                                               'contacts': contacts})
+from .models import News
 
 
 def about(request):
@@ -34,6 +28,11 @@ def religion(request):
 
 def restaurant(request):
     return render(request, 'main/restaurant.html')
+
+
+def news(request):
+    news = News.objects.order_by('-date')
+    return render(request, 'main/news.html', {'news': news})
 
 
 def contacts(request):
