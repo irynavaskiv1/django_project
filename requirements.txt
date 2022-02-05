@@ -6,3 +6,7 @@ sqlparse
 selenium
 python-dotenv
 bs4
+pytest-django
+pytest-cov
+pytest-pythonpath
+-e .
