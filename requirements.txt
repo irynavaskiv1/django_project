@@ -10,3 +10,5 @@ pytest-django
 pytest-cov
 pytest-pythonpath
 -e .
+isort
+flake8
