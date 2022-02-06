@@ -1,0 +1,1 @@
+WEB_MAIN_URL = 'http://www.pohirtsi.space/'
