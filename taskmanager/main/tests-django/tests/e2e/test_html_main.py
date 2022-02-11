@@ -1,7 +1,7 @@
 from pytest_django.asserts import assertTemplateUsed
 from selenium import webdriver
 
-from consts import EXECUTABLE_PATH, POHIRTSI_SPACE_TABS_HTML, URL
+from ..consts import EXECUTABLE_PATH, POHIRTSI_SPACE_TABS_HTML, URL
 
 
 def test_html_main():
