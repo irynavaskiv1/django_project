@@ -1,10 +1,11 @@
 from pytest_django.asserts import assertTemplateUsed
-from selenium import webdriver
 
-from ..consts import EXECUTABLE_PATH, POHIRTSI_SPACE_TABS_HTML, URL
+from ..consts import POHIRTSI_SPACE_TABS_HTML
 
 
-def test_html_main():
+def test_html_main(get_webdriver_url):
     """ test that home page returns correct html"""
-    browser = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
-    assertTemplateUsed(browser.get(URL), POHIRTSI_SPACE_TABS_HTML.about)
+    EMPTY_SRT = ''
+
+    request = get_webdriver_url(page=EMPTY_SRT)
+    assertTemplateUsed(request, POHIRTSI_SPACE_TABS_HTML.about)
