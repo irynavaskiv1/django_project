@@ -19,6 +19,11 @@ POHIRTSI_SPACE_TABS_LINKS = PohirtsiSpaceTabsLinks(about="/about", history="/his
                                                    school="/school", lyceum="/lyceum", religion="/religion",
                                                    restaurant="/restaurant", news="/news", contacts="/contacts")
 
+PAGES = [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history, POHIRTSI_SPACE_TABS_LINKS.kindergarten,
+         POHIRTSI_SPACE_TABS_LINKS.school, POHIRTSI_SPACE_TABS_LINKS.lyceum, POHIRTSI_SPACE_TABS_LINKS.religion,
+         POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news, POHIRTSI_SPACE_TABS_LINKS.contacts]
+
+
 # ui testing
 PohirtsiSpaceTabsTitles = namedtuple(
     "PohirtsiSpaceTabsTitles", "about history kindergarten school lyceum religion restaurant news contacts")
