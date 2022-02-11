@@ -1,8 +1,8 @@
 from pytest_django.asserts import assertTemplateUsed
 from selenium import webdriver
 
-from consts import (EXECUTABLE_PATH, HTML_EXTENSION, POHIRTSI_SPACE_TABS_LINKS,
-                    URL)
+from ..consts import (EXECUTABLE_PATH, HTML_EXTENSION, POHIRTSI_SPACE_TABS_LINKS,
+                      URL)
 
 
 def test_html_all_pages():
