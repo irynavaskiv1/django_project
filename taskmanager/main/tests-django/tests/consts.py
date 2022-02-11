@@ -2,8 +2,7 @@ from collections import namedtuple
 
 # main consts
 URL = 'http://www.pohirtsi.space'
-EXECUTABLE_PATH = '/Users/admin/Documents/django_project/taskmanager/main/' \
-                  'tests-django/drivers/chromedriver'
+EXECUTABLE_PATH = '/Users/admin/Documents/django_project/taskmanager/main/tests-django/drivers/chromedriver'
 
 # html consts
 HTML_EXTENSION = '.html'
@@ -14,9 +13,17 @@ POHIRTSI_SPACE_TABS_HTML = PohirtsiSpaceTabs(about="about.html", history="histor
                                              lyceum="lyceum.html", religion="religion.html",
                                              restaurant="restaurant.html", news="news.html", contacts="contacts.html")
 
-
 PohirtsiSpaceTabsLinks = namedtuple(
     "PohirtsiSpaceTabsLinks", "about history kindergarten school lyceum religion restaurant news contacts")
 POHIRTSI_SPACE_TABS_LINKS = PohirtsiSpaceTabsLinks(about="/about", history="/history", kindergarten="/kindergarten",
                                                    school="/school", lyceum="/lyceum", religion="/religion",
                                                    restaurant="/restaurant", news="/news", contacts="/contacts")
+
+# ui testing
+PohirtsiSpaceTabsTitles = namedtuple(
+    "PohirtsiSpaceTabsTitles", "about history kindergarten school lyceum religion restaurant news contacts")
+POHIRTSI_SPACE_TABS_TITLES = PohirtsiSpaceTabsTitles(about="Про нас - Погірці", history="Історія - Погірці",
+                                                     kindergarten="Садок - Погірці", school="Школа - Погірці",
+                                                     lyceum="Ліцей - Погірці", religion="Релігія - Погірці",
+                                                     restaurant="Ресторан - Погірці", news="Новини - Погірці",
+                                                     contacts="Контакти - Погірці")
