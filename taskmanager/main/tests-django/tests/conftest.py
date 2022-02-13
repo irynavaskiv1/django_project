@@ -1,8 +1,8 @@
 import pytest
+import requests
 from selenium import webdriver
 
 from .consts import EXECUTABLE_PATH, URL
-import requests
 
 
 # general fixtures
