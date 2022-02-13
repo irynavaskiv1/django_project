@@ -27,8 +27,8 @@ PAGES = [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history, POH
 # ui testing
 PohirtsiSpaceTabsTitles = namedtuple(
     "PohirtsiSpaceTabsTitles", "about history kindergarten school lyceum religion restaurant news contacts")
-POHIRTSI_SPACE_TABS_TITLES = PohirtsiSpaceTabsTitles(about="Про нас - Погірці", history="Історія - Погірці",
-                                                     kindergarten="Садок - Погірці", school="Школа - Погірці",
-                                                     lyceum="Ліцей - Погірці", religion="Релігія - Погірці",
-                                                     restaurant="Ресторан - Погірці", news="Новини - Погірці",
-                                                     contacts="Контакти - Погірці")
+POHIRTSI_SPACE_TABS_TITLES = PohirtsiSpaceTabsTitles(about=" Про село - Погірці ", history=" Історія - Погірці ",
+                                                     kindergarten=" Садок - Погірці ", school=" Школа - Погірці ",
+                                                     lyceum=" Ліцей - Погірці ", religion=" Релігія - Погірці ",
+                                                     restaurant=" Ресторан - Погірці ", news=" Новини - Погірці ",
+                                                     contacts=" Контакти - Погірці ")
