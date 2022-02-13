@@ -1,6 +1,7 @@
 from time import sleep as explicit_wait
 
-from ..consts import (POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES, PAGES)
+from ..consts import (PAGES, POHIRTSI_SPACE_TABS_LINKS,
+                      POHIRTSI_SPACE_TABS_TITLES)
 
 
 def test_titles_in_each_page(get_webdriver_url, get_title):
