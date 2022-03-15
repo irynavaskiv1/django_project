@@ -11,3 +11,5 @@ pytest-pythonpath
 -e .
 isort
 flake8
+requests
+pytest-cov
