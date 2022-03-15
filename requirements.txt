@@ -7,8 +7,9 @@ selenium
 python-dotenv
 bs4
 pytest-django
-pytest-cov
 pytest-pythonpath
 -e .
 isort
 flake8
+requests
+pytest-cov
