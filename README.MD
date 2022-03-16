@@ -1,8 +1,9 @@
 1. set up virtual environment
-source env/bin/activate
+python3.8 -m venv venv
+source venv/bin/activate
 
 2. create requirements.txt and install all packages
-python -m pip install Django
+pip3 install -r requirements.txt
 
 3. create a project, which ia a container for site
 django-admin startproject name [directory]
@@ -17,8 +18,5 @@ python3 manage.py migrate
 
 ###########################TEST RUN:###########################
 1. run functional tests
-taskmanager/main/templates/tests/functional_tests.py
-
-2. run module tests (without run server)
-python3 manage.py test main/templates/tests/
+pytest taskmanager/main/tests-django/tests/ui/
 ###############################################################
