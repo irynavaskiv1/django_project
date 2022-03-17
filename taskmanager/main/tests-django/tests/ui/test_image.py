@@ -1,7 +1,9 @@
 from time import sleep as explicit_wait
+
 import pytest
-from ..consts import (POHIRTSI_SPACE_TABS_LINKS,
-                      POHIRTSI_SPACE_TABS_TITLES)
+
+from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES
+
 
 @pytest.mark.skip
 @pytest.mark.parametrize("pages", [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history,
@@ -10,7 +12,7 @@ from ..consts import (POHIRTSI_SPACE_TABS_LINKS,
                                    POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news,
                                    POHIRTSI_SPACE_TABS_LINKS.contacts])
 def test_image_in_each_page(pages, get_webdriver_url, get_image):
-    """ test that all pages returns correct title """
+    """ test that all pages returns correct image """
 
     try:
         for page in pages:
