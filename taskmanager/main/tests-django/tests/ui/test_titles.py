@@ -1,16 +1,15 @@
 from time import sleep as explicit_wait
 
 from ..consts import (PAGES, POHIRTSI_SPACE_TABS_LINKS,
-                      POHIRTSI_SPACE_TABS_TITLES)
+                      POHIRTSI_SPACE_TABS_TITLES, TIMEOUT)
 
 
 def test_titles_in_each_page(get_webdriver_url, get_title):
-    """ test that all pages returns correct title """
-
+    """ test that all pages returns correct title at the top in browser menu"""
     try:
         for page in PAGES:
             get_webdriver_url(page=page)
-            explicit_wait(2)
+            explicit_wait(TIMEOUT // 2)
             title = get_title(page=page)
             if page == POHIRTSI_SPACE_TABS_LINKS.about:
                 assert POHIRTSI_SPACE_TABS_TITLES.about == title
