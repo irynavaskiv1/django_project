@@ -4,7 +4,9 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import EXECUTABLE_PATH, MENU_BAR_STR, POHIRTSI_SPACE_TABS_LINKS
+from ..consts import (EXECUTABLE_PATH, MENU_BAR_STR, POHIRTSI_SPACE_TABS_LINKS,
+                      TIMEOUT)
+from ..view import MENU_BAR_ID
 
 
 @pytest.mark.parametrize("pages", [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history,
@@ -18,9 +20,9 @@ def test_navigation_table(pages, get_webdriver_url, get_title):
         for page in pages:
             browser = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
             browser.get(page)
-            explicit_wait(5)
+            explicit_wait(TIMEOUT)
 
-            elements = browser.find_element(By.ID, "menu-menu").text
+            elements = browser.find_element(By.ID, MENU_BAR_ID).text
             new_elements = elements.rstrip()
             assert new_elements == MENU_BAR_STR
     except Exception as e:
