@@ -4,7 +4,7 @@ from ..consts import (PAGES, POHIRTSI_SPACE_TABS_LINKS,
                       POHIRTSI_SPACE_TABS_TITLES, TIMEOUT)
 
 
-def test_titles_in_each_page(get_webdriver_url, get_title):
+def test_titles(get_webdriver_url, get_title):
     """ test that all pages returns correct title at the top in browser menu"""
     try:
         for page in PAGES:

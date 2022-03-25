@@ -11,9 +11,9 @@ from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES
                                    POHIRTSI_SPACE_TABS_LINKS.lyceum, POHIRTSI_SPACE_TABS_LINKS.religion,
                                    POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news,
                                    POHIRTSI_SPACE_TABS_LINKS.contacts])
-def test_image_in_each_page(pages, get_webdriver_url, get_image):
-    """ test that all pages returns correct image """
-    #TODO: add correct images to desktop app, now this case is FAIL
+def test_main_images(pages, get_webdriver_url, get_image):
+    """ test that all pages returns correct main image """
+    # TODO: add correct images to desktop app, now this case is FAIL
     try:
         for page in pages:
             get_webdriver_url(page=page)
