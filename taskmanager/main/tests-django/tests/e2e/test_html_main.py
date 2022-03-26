@@ -4,7 +4,18 @@ from ..consts import POHIRTSI_SPACE_TABS_HTML
 
 
 def test_html_main(get_webdriver_url):
-    """ test that home page returns correct html """
+    """
+    @ID: 002
+    @Category: e2e
+    @Description: Test that home page returns correct html
+    @tcmethod: automated
+
+    Steps:
+        1. Get correct url for home page
+
+    Expected:
+        1. Main page returns correct HTML
+    """
     EMPTY_SRT = ''
 
     request = get_webdriver_url(page=EMPTY_SRT)
