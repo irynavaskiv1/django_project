@@ -5,7 +5,18 @@ from ..consts import (PAGES, POHIRTSI_SPACE_TABS_LINKS,
 
 
 def test_titles(get_webdriver_url, get_title):
-    """ test that all pages returns correct title at the top in browser menu"""
+    """
+    @ID: 009
+    @Category: ui
+    @Description: test that all pages returns correct title at the top in browser menu
+    @tcmethod: automated
+
+    Steps:
+        1. Click to each page in site
+
+    Expected:
+        1. In each page title is correct
+    """
     try:
         for page in PAGES:
             get_webdriver_url(page=page)
