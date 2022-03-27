@@ -11,7 +11,7 @@ def test_html_all_pages(get_webdriver_url):
     @tcmethod: automated
 
     Steps:
-        1. Get correct urls for each page
+        1. Get urls for each page
 
     Expected:
         1. All pages return correct HTML

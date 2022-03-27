@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_BUTTONS_TITLES, TIMEOUT,
                       URL)
-from ..view import BUTTONS, ID_TEXT_TITLE, ID_LOGO_IMG
+from ..view import BUTTONS, ID_LOGO_IMG, ID_TEXT_TITLE
 
 
 @pytest.mark.skip
@@ -15,7 +15,7 @@ def test_logo(button):
     """
     @ID: 005
     @Category: ui
-    @Description: test that click to logo returns main page
+    @Description: Test that click to logo returns main page
     @tcmethod: automated
 
     Steps:

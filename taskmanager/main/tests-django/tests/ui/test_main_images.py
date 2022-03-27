@@ -2,7 +2,8 @@ from time import sleep as explicit_wait
 
 import pytest
 
-from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES, TIMEOUT
+from ..consts import (POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES,
+                      TIMEOUT)
 
 
 @pytest.mark.skip
@@ -15,7 +16,7 @@ def test_main_images(pages, get_webdriver_url, get_image):
     """
     @ID: 006
     @Category: ui
-    @Description: test that all pages returns correct main image
+    @Description: Test that all pages returns correct main image
     TODO: add correct images to desktop app, now this case is FAIL
     @tcmethod: automated
 

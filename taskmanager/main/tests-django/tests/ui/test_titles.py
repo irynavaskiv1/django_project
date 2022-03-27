@@ -8,7 +8,7 @@ def test_titles(get_webdriver_url, get_title):
     """
     @ID: 009
     @Category: ui
-    @Description: test that all pages returns correct title at the top in browser menu
+    @Description: Test that all pages returns correct title at the top in browser menu
     @tcmethod: automated
 
     Steps:

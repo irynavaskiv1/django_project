@@ -22,6 +22,7 @@ def test_click_buttons(button, get_webdriver_url, get_title):
 
     Expected:
         1. Click return correct page
+        2. Click return correct page title
     """
     try:
         driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)

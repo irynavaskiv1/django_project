@@ -25,7 +25,7 @@ def test_navigation_table(pages, get_webdriver_url, get_title):
         1. Click to each button in main page
 
     Expected:
-        1. In each page navigation bar return correct and all buttons
+        1. In each page navigation bar returns all buttons
     """
     try:
         for page in pages:

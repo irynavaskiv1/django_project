@@ -11,10 +11,10 @@ def test_html_main(get_webdriver_url):
     @tcmethod: automated
 
     Steps:
-        1. Get correct url for home page
+        1. Get url for home page
 
     Expected:
-        1. Main page returns correct HTML
+        1. Home page returns correct HTML
     """
     EMPTY_SRT = ''
 

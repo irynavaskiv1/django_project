@@ -6,7 +6,7 @@ def test_main_words():
     """
     @ID: 007
     @Category: ui
-    @Description: test that all pages returns correct main words
+    @Description: Test that all pages returns correct main words
     @tcmethod: automated
 
     Steps:

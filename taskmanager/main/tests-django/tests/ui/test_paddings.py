@@ -6,7 +6,7 @@ def test_paddings():
     """
     @ID: 008
     @Category: ui
-    @Description: test that all pages returns correct padding
+    @Description: Test that all pages returns correct padding
     @tcmethod: automated
 
     Steps:
