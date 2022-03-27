@@ -15,7 +15,18 @@ from ..view import MENU_BAR_ID
                                    POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news,
                                    POHIRTSI_SPACE_TABS_LINKS.contacts])
 def test_navigation_table(pages, get_webdriver_url, get_title):
-    """ test that all pages returns correct navigation bar """
+    """
+    @ID: 004
+    @Category: integration
+    @Description: Test that all pages returns correct navigation bar
+    @tcmethod: automated
+
+    Steps:
+        1. Click to each button in main page
+
+    Expected:
+        1. In each page navigation bar return correct and all buttons
+    """
     try:
         for page in pages:
             browser = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
@@ -26,4 +37,4 @@ def test_navigation_table(pages, get_webdriver_url, get_title):
             new_elements = elements.rstrip()
             assert new_elements == MENU_BAR_STR
     except Exception as e:
-        print('Exception in test_navigation_tablet, ', e)
+        print('Exception in test_navigation_table, ', e)
