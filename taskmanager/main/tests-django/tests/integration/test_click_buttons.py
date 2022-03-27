@@ -11,7 +11,18 @@ from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
 @pytest.mark.parametrize("button", BUTTONS, scope="function")
 def test_click_buttons(button, get_webdriver_url, get_title):
-    """ test buttons click and return correct page with correct title """
+    """
+    @ID: 003
+    @Category: integration
+    @Description: Test buttons click and return correct page with correct title
+    @tcmethod: automated
+
+    Steps:
+        1. Click to each button in main page
+
+    Expected:
+        1. Click return correct page
+    """
     try:
         driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
         driver.get(URL)
@@ -48,4 +59,4 @@ def test_click_buttons(button, get_webdriver_url, get_title):
             assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.contacts,\
                 f'Page title {static_title_from_page} is not correct!'
     except Exception as e:
-        print('Exception in test_navigation_tablet, ', e)
+        print('Exception in test_click_buttons, ', e)
