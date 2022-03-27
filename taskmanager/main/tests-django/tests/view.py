@@ -1,7 +1,8 @@
 from collections import namedtuple
 
 # menu bar buttons
-ID_LOGO_IMG = ''
+MENU_BAR_ID = 'menu-menu'
+ID_LOGO_IMG = 'logo image'
 
 PohirtsiSpaceButtonsIds = namedtuple(
     "PohirtsiSpaceTabsLinks", "about history kindergarten school lyceum religion restaurant news contacts")
