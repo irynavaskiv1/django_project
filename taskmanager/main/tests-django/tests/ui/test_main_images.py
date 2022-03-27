@@ -2,7 +2,7 @@ from time import sleep as explicit_wait
 
 import pytest
 
-from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES
+from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES, TIMEOUT
 
 
 @pytest.mark.skip
@@ -12,12 +12,23 @@ from ..consts import POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES
                                    POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news,
                                    POHIRTSI_SPACE_TABS_LINKS.contacts])
 def test_main_images(pages, get_webdriver_url, get_image):
-    """ test that all pages returns correct main image """
-    # TODO: add correct images to desktop app, now this case is FAIL
+    """
+    @ID: 006
+    @Category: ui
+    @Description: test that all pages returns correct main image
+    TODO: add correct images to desktop app, now this case is FAIL
+    @tcmethod: automated
+
+    Steps:
+        1. Click to each page in site
+
+    Expected:
+        1. In each page main image is visible and correct
+    """
     try:
         for page in pages:
             get_webdriver_url(page=page)
-            explicit_wait(2)
+            explicit_wait(TIMEOUT)
             title = get_image(page=page)
             if page == POHIRTSI_SPACE_TABS_LINKS.about:
                 assert POHIRTSI_SPACE_TABS_TITLES.about == title
@@ -40,4 +51,4 @@ def test_main_images(pages, get_webdriver_url, get_image):
             else:
                 return f'{page} is not found!'
     except Exception as e:
-        print('Exception in test_image_in_each_page, ', e)
+        print('Exception in test_main_images, ', e)
