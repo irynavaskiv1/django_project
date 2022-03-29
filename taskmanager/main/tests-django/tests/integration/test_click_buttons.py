@@ -10,7 +10,7 @@ from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
 
 @pytest.mark.parametrize("button", BUTTONS, scope="function")
-def test_click_buttons(button, get_webdriver_url, get_title):
+def test_click_buttons(button):
     """
     @ID: 003
     @Category: integration

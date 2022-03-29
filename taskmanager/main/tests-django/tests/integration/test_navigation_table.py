@@ -14,7 +14,7 @@ from ..view import ID_MENU_BAR
                                    POHIRTSI_SPACE_TABS_LINKS.lyceum, POHIRTSI_SPACE_TABS_LINKS.religion,
                                    POHIRTSI_SPACE_TABS_LINKS.restaurant, POHIRTSI_SPACE_TABS_LINKS.news,
                                    POHIRTSI_SPACE_TABS_LINKS.contacts])
-def test_navigation_table(pages, get_webdriver_url, get_title):
+def test_navigation_table(pages):
     """
     @ID: 004
     @Category: integration
