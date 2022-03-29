@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 
 from ..consts import (EXECUTABLE_PATH, MENU_BAR_STR, POHIRTSI_SPACE_TABS_LINKS,
                       TIMEOUT)
-from ..view import MENU_BAR_ID
+from ..view import ID_MENU_BAR
 
 
 @pytest.mark.parametrize("pages", [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history,
@@ -33,7 +33,7 @@ def test_navigation_table(pages, get_webdriver_url, get_title):
             browser.get(page)
             explicit_wait(TIMEOUT)
 
-            elements = browser.find_element(By.ID, MENU_BAR_ID).text
+            elements = browser.find_element(By.ID, ID_MENU_BAR).text
             new_elements = elements.rstrip()
             assert new_elements == MENU_BAR_STR
     except Exception as e:

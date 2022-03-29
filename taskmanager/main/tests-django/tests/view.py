@@ -1,7 +1,7 @@
 from collections import namedtuple
 
 # menu bar buttons
-MENU_BAR_ID = 'menu-menu'
+ID_MENU_BAR = 'menu-menu'
 ID_LOGO_IMG = 'logo image'
 
 PohirtsiSpaceButtonsIds = namedtuple(
