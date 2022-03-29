@@ -15,4 +15,5 @@ def test_paddings():
     Expected:
         1. In each page paddings (Погірці, 2021 - 2025) is visible and correct
     """
+
     pass

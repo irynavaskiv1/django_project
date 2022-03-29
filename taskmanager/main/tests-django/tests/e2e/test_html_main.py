@@ -16,6 +16,7 @@ def test_html_main(get_webdriver_url):
     Expected:
         1. Home page returns correct HTML
     """
+
     EMPTY_SRT = ''
 
     request = get_webdriver_url(page=EMPTY_SRT)

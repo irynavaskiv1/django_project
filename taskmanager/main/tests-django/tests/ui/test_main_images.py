@@ -26,6 +26,7 @@ def test_main_images(pages, get_webdriver_url, get_image):
     Expected:
         1. In each page main image is visible and correct
     """
+
     try:
         for page in pages:
             get_webdriver_url(page=page)

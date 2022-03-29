@@ -24,6 +24,7 @@ def test_logo(button):
     Expected:
         1. In each page logo button returns main page
     """
+
     driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
     driver.get(URL)
     explicit_wait(TIMEOUT // 2)
