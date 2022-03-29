@@ -2,6 +2,11 @@ from collections import namedtuple
 
 # main consts
 URL = 'http://www.pohirtsi.space'
+URLS = ['https://www.pohirtsi.space/', 'https://www.pohirtsi.space/history', 'https://www.pohirtsi.space/kindergarten',
+        'https://www.pohirtsi.space/school', 'https://www.pohirtsi.space/lyceum',
+        'https://www.pohirtsi.space/religion', 'https://www.pohirtsi.space/restaurant',
+        'https://www.pohirtsi.space/news', 'https://www.pohirtsi.space/contacts']
+
 EXECUTABLE_PATH = '/Users/admin/Documents/django_project/taskmanager/main/tests-django/drivers/chromedriver'
 TIMEOUT = 5
 
