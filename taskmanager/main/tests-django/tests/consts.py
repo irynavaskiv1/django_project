@@ -41,9 +41,9 @@ POHIRTSI_SPACE_TABS_TITLES = PohirtsiSpaceTabsTitles(about=" Про село - �
 
 MENU_BAR_STR = 'Про нас\nІсторія\nСадок\nШкола\nЛіцей\nРелігія\nРесторан\nНовини\nКонтакти'
 
-PohirtsiSpaceButtonsTitles = namedtuple(
+PohirtsiSpacePageTitles = namedtuple(
     "PohirtsiSpaceTabsTitles", "about history kindergarten school lyceum religion restaurant news contacts")
-POHIRTSI_SPACE_BUTTONS_TITLES = PohirtsiSpaceButtonsTitles(about="Про село Погірці", history="Історія села",
-                                                           kindergarten="Садок", school="Школа", lyceum="Ліцей",
-                                                           religion="Релігія", restaurant="Ресторан", news="Новини",
-                                                           contacts="Контакти")
+POHIRTSI_SPACE_PAGE_TITLES = PohirtsiSpacePageTitles(about="Про село Погірці", history="Історія села",
+                                                     kindergarten="Садок", school="Школа", lyceum="Ліцей",
+                                                     religion="Релігія", restaurant="Ресторан", news="Новини",
+                                                     contacts="Контакти")

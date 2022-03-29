@@ -4,7 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_BUTTONS_TITLES, TIMEOUT,
+from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT,
                       URL)
 from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
@@ -33,31 +33,31 @@ def test_click_buttons(button, get_webdriver_url, get_title):
         static_title_from_page = driver.find_element(By.ID, ID_TEXT_TITLE).text
 
         if button == POHIRTSI_SPACE_BUTTONS_IDS.about:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.about, \
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.about, \
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.history:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.history, \
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.history, \
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.kindergarten:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.kindergarten,\
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.kindergarten,\
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.school:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.school,\
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.school,\
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.lyceum:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.lyceum, \
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.lyceum, \
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.religion:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.religion, \
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.religion, \
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.restaurant:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.restaurant,\
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.restaurant,\
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.news:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.news,\
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.news,\
                 f'Page title {static_title_from_page} is not correct!'
         elif button == POHIRTSI_SPACE_BUTTONS_IDS.contacts:
-            assert static_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.contacts,\
+            assert static_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.contacts,\
                 f'Page title {static_title_from_page} is not correct!'
     except Exception as e:
         print('Exception in test_click_buttons, ', e)

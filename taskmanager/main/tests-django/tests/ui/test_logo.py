@@ -4,7 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_BUTTONS_TITLES, TIMEOUT,
+from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT,
                       URL)
 from ..view import BUTTONS, ID_LOGO_IMG, ID_TEXT_TITLE
 
@@ -38,5 +38,5 @@ def test_logo(button):
 
     update_title_from_page = driver.find_element(By.ID, ID_TEXT_TITLE).text
     print(update_title_from_page, 'update_title_from_page')
-    assert update_title_from_page == POHIRTSI_SPACE_BUTTONS_TITLES.about, \
+    assert update_title_from_page == POHIRTSI_SPACE_PAGE_TITLES.about, \
         f'Page title {update_title_from_page} is not correct!'

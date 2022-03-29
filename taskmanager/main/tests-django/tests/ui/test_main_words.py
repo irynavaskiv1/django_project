@@ -4,7 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_BUTTONS_TITLES,
+from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES,
                       POHIRTSI_SPACE_TABS_LINKS, TIMEOUT, URL, URLS)
 from ..view import ID_TEXT_TITLE
 
@@ -30,22 +30,22 @@ def test_main_words(url):
 
     title = driver.find_element(By.ID, ID_TEXT_TITLE)
     if POHIRTSI_SPACE_TABS_LINKS.about in url or url == URL:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.about == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.about == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.history in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.history == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.history == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.kindergarten in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.kindergarten == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.kindergarten == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.school in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.school == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.school == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.lyceum in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.lyceum == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.lyceum == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.religion in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.religion == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.religion == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.restaurant in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.restaurant == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.restaurant == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.news in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.news == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.news == title.text
     elif POHIRTSI_SPACE_TABS_LINKS.contacts in url:
-        assert POHIRTSI_SPACE_BUTTONS_TITLES.contacts == title.text
+        assert POHIRTSI_SPACE_PAGE_TITLES.contacts == title.text
     else:
         return f'{url} is not found!'
