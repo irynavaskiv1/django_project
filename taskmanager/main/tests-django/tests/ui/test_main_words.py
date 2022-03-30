@@ -9,7 +9,7 @@ from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES,
 from ..view import ID_TEXT_TITLE
 
 
-@pytest.mark.parametrize('url', URLS)
+@pytest.mark.parametrize('url', URLS, scope="function")
 def test_main_words(url):
     """
     @ID: 007
