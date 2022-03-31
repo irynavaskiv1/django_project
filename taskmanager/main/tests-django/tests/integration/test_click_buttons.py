@@ -4,8 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT,
-                      URL)
+from ..consts import EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT, URL
 from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
 

@@ -4,8 +4,7 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, MENU_BAR_STR,
-                      TIMEOUT, URLS)
+from ..consts import EXECUTABLE_PATH, MENU_BAR_STR, TIMEOUT, URLS
 from ..view import ID_MENU_BAR
 
 
