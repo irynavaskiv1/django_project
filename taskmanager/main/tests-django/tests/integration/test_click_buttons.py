@@ -1,10 +1,11 @@
+import os
 from time import sleep as explicit_wait
 
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT, URL
+from ..consts import POHIRTSI_SPACE_PAGE_TITLES, TIMEOUT, URL
 from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
 
@@ -24,7 +25,9 @@ def test_click_buttons(button):
         2. Click return correct page title
     """
 
-    driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
+    path = os.path.abspath(__file__ + "/../../../")
+    chrome_path = os.path.join(path, 'drivers', 'chromedriver')
+    driver = webdriver.Chrome(executable_path=chrome_path)
     driver.get(URL)
     explicit_wait(TIMEOUT)
 

@@ -1,10 +1,11 @@
+import os
 from time import sleep as explicit_wait
 
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import EXECUTABLE_PATH, MENU_BAR_STR, TIMEOUT, URLS
+from ..consts import MENU_BAR_STR, TIMEOUT, URLS
 from ..view import ID_MENU_BAR
 
 
@@ -23,7 +24,9 @@ def test_navigation_table(url):
         1. In each page navigation bar returns all buttons
     """
 
-    driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
+    path = os.path.abspath(__file__ + "/../../../")
+    chrome_path = os.path.join(path, 'drivers', 'chromedriver')
+    driver = webdriver.Chrome(executable_path=chrome_path)
     driver.get(url=url)
     explicit_wait(TIMEOUT * 2)
 
