@@ -27,5 +27,4 @@ jobs:
     - name: Django testing
       run: |
         pytest taskmanager/main/tests-django/tests/e2e/
-        pytest taskmanager/main/tests-django/tests/integration/
         pytest taskmanager/main/tests-django/tests/ui/

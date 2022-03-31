@@ -1,10 +1,11 @@
+import os
 from time import sleep as explicit_wait
 
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import EXECUTABLE_PATH, TIMEOUT, URL
+from ..consts import TIMEOUT, URL
 from ..view import BUTTONS, ID_LOGO_IMG, SRC_LOGO
 
 
@@ -23,7 +24,11 @@ def test_logo_src(button):
         1. In each page logo button returns correct src
     """
 
-    driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
+    path = os.path.abspath(__file__ + "/../../../")
+    chrome_path_obj = os.path.join(path, 'drivers', 'chromedriver')
+    chrome_path = str(chrome_path_obj)
+    driver = webdriver.Chrome(executable_path=chrome_path)
+
     driver.get(URL)
     explicit_wait(TIMEOUT)
     driver.find_element(By.ID, button).click()
