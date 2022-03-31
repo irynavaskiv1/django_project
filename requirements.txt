@@ -13,3 +13,4 @@ isort
 flake8
 requests
 pytest-cov
+pytest
