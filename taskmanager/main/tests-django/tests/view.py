@@ -3,6 +3,7 @@ from collections import namedtuple
 # menu bar buttons
 ID_MENU_BAR = 'menu-menu'
 ID_LOGO_IMG = 'logo image'
+SRC_LOGO = 'https://photo.foto-planeta.com/view/7/7/9/6/pogortsy-779640.jpg'
 
 PohirtsiSpaceButtonsIds = namedtuple(
     "PohirtsiSpaceTabsLinks", "about history kindergarten school lyceum religion restaurant news contacts")
