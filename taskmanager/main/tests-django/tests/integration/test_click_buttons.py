@@ -26,7 +26,8 @@ def test_click_buttons(button):
     """
 
     path = os.path.abspath(__file__ + "/../../../")
-    chrome_path = os.path.join(path, 'drivers', 'chromedriver')
+    chrome_path_obj = os.path.join(path, 'drivers', 'chromedriver')
+    chrome_path = str(chrome_path_obj)
     driver = webdriver.Chrome(executable_path=chrome_path)
     driver.get(URL)
     explicit_wait(TIMEOUT)
