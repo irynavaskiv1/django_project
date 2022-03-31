@@ -1,3 +1,5 @@
+import os
+
 import pytest
 import requests
 from selenium import webdriver
@@ -21,6 +23,19 @@ def get_webdriver_url():
         except Exception as e:
             print(f'Can open {opened_url} !', e)
     return _get_webdriver_url
+
+
+@pytest.fixture
+def get_webdriver_relative_path():
+    def _():
+        try:
+            path = os.path.abspath(__file__ + "/../../")
+            chrome_path_obj = os.path.join(path, 'drivers', 'chromedriver')
+            chrome_path = str(chrome_path_obj)
+        except Exception as e:
+            print(f'Can not find driver path {chrome_path} !', e)
+        return chrome_path
+    return _
 
 
 # ui testing fixtures
