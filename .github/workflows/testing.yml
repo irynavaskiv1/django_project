@@ -1,7 +1,7 @@
 # This workflow will install Python dependencies, run tests and lint with a variety of Python versions
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-python-with-github-actions
 
-name: Django Tests
+name: Run CI/CD django tests
 
 on:
   push:
@@ -11,10 +11,10 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     steps:
+    - name: Install Chromium
+      run: sudo apt-get install chromium-browser
     - uses: actions/checkout@v2
     - name: Set up Python 3.6
       uses: actions/setup-python@v2
@@ -24,12 +24,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Install driver
-      uses: browser-actions/setup-chrome@latest
-      run: |
-        chrome --version
-        sudo xattr -c chromedriver
-    - name: Django testing
+    - name: Django e2e testing
       run: |
         pytest taskmanager/main/tests-django/tests/e2e/
+    - name: Django integration testing
+      run: |
+        pytest taskmanager/main/tests-django/tests/integration/
+    - name: Django ui testing
+      run: |
         pytest taskmanager/main/tests-django/tests/ui/
