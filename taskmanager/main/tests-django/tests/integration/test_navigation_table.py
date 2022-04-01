@@ -1,4 +1,3 @@
-import os
 from time import sleep as explicit_wait
 
 import pytest
@@ -10,7 +9,7 @@ from ..view import ID_MENU_BAR
 
 
 @pytest.mark.parametrize('url', URLS)
-def test_navigation_table(url):
+def test_navigation_table(url, get_webdriver_relative_path):
     """
     @ID: 004
     @Category: integration
@@ -24,10 +23,7 @@ def test_navigation_table(url):
         1. In each page navigation bar returns all buttons
     """
 
-    path = os.path.abspath(__file__ + "/../../../")
-    chrome_path_obj = os.path.join(path, 'drivers', 'chromedriver')
-    chrome_path = str(chrome_path_obj)
-    driver = webdriver.Chrome(executable_path=chrome_path)
+    driver = webdriver.Chrome(executable_path=get_webdriver_relative_path())
     explicit_wait(TIMEOUT)
     driver.get(url=url)
     explicit_wait(TIMEOUT * 2)

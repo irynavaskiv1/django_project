@@ -1,4 +1,3 @@
-import os
 from time import sleep as explicit_wait
 
 import pytest
@@ -10,7 +9,7 @@ from ..view import BUTTONS, ID_TEXT_TITLE, POHIRTSI_SPACE_BUTTONS_IDS
 
 
 @pytest.mark.parametrize("button", BUTTONS, scope="function")
-def test_click_buttons(button):
+def test_click_buttons(button, get_webdriver_relative_path):
     """
     @ID: 003
     @Category: integration
@@ -25,10 +24,7 @@ def test_click_buttons(button):
         2. Click return correct page title
     """
 
-    path = os.path.abspath(__file__ + "/../../../")
-    chrome_path_obj = os.path.join(path, 'drivers', 'chromedriver')
-    chrome_path = str(chrome_path_obj)
-    driver = webdriver.Chrome(executable_path=chrome_path)
+    driver = webdriver.Chrome(executable_path=get_webdriver_relative_path())
     driver.get(URL)
     explicit_wait(TIMEOUT)
 

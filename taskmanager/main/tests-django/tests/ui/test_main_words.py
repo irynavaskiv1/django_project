@@ -4,13 +4,13 @@ import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
-from ..consts import (EXECUTABLE_PATH, POHIRTSI_SPACE_PAGE_TITLES,
+from ..consts import (POHIRTSI_SPACE_PAGE_TITLES,
                       POHIRTSI_SPACE_TABS_LINKS, TIMEOUT, URL, URLS)
 from ..view import ID_TEXT_TITLE
 
 
 @pytest.mark.parametrize('url', URLS, scope="function")
-def test_main_words(url):
+def test_main_words(url, get_webdriver_relative_path):
     """
     @ID: 007
     @Category: ui
@@ -24,7 +24,7 @@ def test_main_words(url):
         1. In each page main words (Про нас/Історія/Садок..) is visible and correct
     """
 
-    driver = webdriver.Chrome(executable_path=EXECUTABLE_PATH)
+    driver = webdriver.Chrome(executable_path=get_webdriver_relative_path())
     driver.get(url)
     explicit_wait(TIMEOUT * 2)
 
