@@ -22,8 +22,8 @@ def test_navigation_table(url, get_webdriver_relative_path):
     Expected:
         1. In each page navigation bar returns all buttons
     """
-
-    driver = webdriver.Chrome(executable_path=get_webdriver_relative_path())
+    executable_path = get_webdriver_relative_path()
+    driver = webdriver.Chrome(executable_path=executable_path)
     explicit_wait(TIMEOUT)
     driver.get(url=url)
     explicit_wait(TIMEOUT * 2)

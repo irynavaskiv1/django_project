@@ -6,7 +6,7 @@ from ..consts import (POHIRTSI_SPACE_TABS_LINKS, POHIRTSI_SPACE_TABS_TITLES,
                       TIMEOUT)
 
 
-@pytest.mark.skip
+@pytest.mark.skip(reason="have bug in one page")
 @pytest.mark.parametrize("pages", [POHIRTSI_SPACE_TABS_LINKS.about, POHIRTSI_SPACE_TABS_LINKS.history,
                                    POHIRTSI_SPACE_TABS_LINKS.kindergarten, POHIRTSI_SPACE_TABS_LINKS.school,
                                    POHIRTSI_SPACE_TABS_LINKS.lyceum, POHIRTSI_SPACE_TABS_LINKS.religion,
