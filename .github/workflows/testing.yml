@@ -29,12 +29,12 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    - name: Django ui testing
-      run: |
-        pytest taskmanager/main/tests-django/tests/ui/
     - name: Django e2e testing
       run: |
         pytest taskmanager/main/tests-django/tests/e2e/
-    - name: Django integration testing
-      run: |
-        pytest taskmanager/main/tests-django/tests/integration/
+#    - name: Django integration testing
+#      run: |
+#        pytest taskmanager/main/tests-django/tests/integration/
+#    - name: Django ui testing
+#      run: |
+#        pytest taskmanager/main/tests-django/tests/ui/
